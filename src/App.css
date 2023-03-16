@@ -1,0 +1,59 @@
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 100%;
+    font-weight: 800;
+}
+    section label {
+        color: var(--neon-green);
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+    }
+
+    section h1 {
+        color: var(--light-cyan);
+    }
+
+    #dividerDesktop {
+        display: block;
+    }
+
+    #dividerMobile {
+        display: none;
+    }
+
+    button {
+        position: absolute;
+        bottom: 0;
+        align-self: center;
+        width: 4rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border-width: 0;
+        max-width: 30%;
+        transform: translate(0, 50%);
+        background-color: var(--neon-green);
+    }
+
+        button:hover {
+            cursor: pointer;
+            box-shadow: 0 0 2rem var(--neon-green);
+        }
+
+@media screen and (max-aspect-ratio: 1) {
+    #dividerDesktop {
+        display: none;
+    }
+
+    #dividerMobile {
+        display: block;
+        margin-block-end: 2rem;
+    }
+}
